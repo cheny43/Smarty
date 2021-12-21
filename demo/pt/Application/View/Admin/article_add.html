@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="renderer" content="webkit">
+<title>拼图后台管理-后台管理</title>
+<link rel="stylesheet" href="css/pintuer.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+<div class="admin">
+  <div class="tab">
+    <div class="tab-head"> <strong>文章管理</strong>
+      <ul class="tab-nav">
+        <li class="active"><a href="#tab-set">添加文章</a></li>
+      </ul>
+    </div>
+    <div class="tab-body"> <br />
+      <div class="tab-panel active" id="tab-set">
+        <form method="post" class="form-x" action="system.html">
+          <div class="form-group">
+            <div class="label">
+              <label for="title">文章标题</label>
+            </div>
+            <div class="field">
+              <input type="text" class="input" id="title" name="title" size="50" placeholder="请填写你文章标题的名称"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="label">
+              <label for="cat_id">所属分类</label>
+            </div>
+            <div class="field">
+              <select class="input" name="cat_id" style="width:20%" id="cat_id">
+                <option value="0">日记</option>
+                <option value="1">欣赏</option>
+                <option value="1">程序人生</option>
+                <option value="1">经典语录</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="label">
+              <label for="content">文章内容</label>
+            </div>
+            <div class="field">
+              <textarea name="content" cols="50" rows="5" class="input" id="content" placeholder="内容"></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="label">
+              <label for="is_top">是否置顶</label>
+            </div>
+            <div class="field">
+              <input type="radio" name="is_top" value="1">是
+              <input type="radio" name="is_top" value="0" checked>否
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="label">
+              <label for="desc">是否公开</label>
+            </div>
+            <div class="field">
+              <input type="radio" name="is_public" value="1" checked>是
+              <input type="radio" name="is_public" value="0">否
+            </div>
+          </div>
+          <div class="form-button">
+            <button class="button bg-main" type="submit">提交</button>
+          </div>
+        </form>
+      </div>
+      <div class="tab-panel" id="tab-email">邮件设置</div>
+      <div class="tab-panel" id="tab-upload">上传设置</div>
+      <div class="tab-panel" id="tab-visit">访问限制</div>
+    </div>
+  </div>
+  <p class="text-right text-gray">基于<a class="text-gray" target="_blank" href="#">传智播客</a>构建</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <script type="text/javascript" src="index.js"></script>
+</head>
+<style>
+    canvas {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .list {
+        display: block;
+        text-decoration: none;
+        width: 480px;
+        height: 50px;
+        text-align: center;
+        background-color: rgb(132, 183, 241);
+        font-size: 34px;
+        font-weight: 600;
+        margin: 0 auto;
+    }
+
+    .garden {
+        margin-right: 100pc;
+    }
+
+</style>
+
+<body>
+
+    <div class="container">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <canvas id="viewport" width="480" height="600"></canvas>
+            <a href="block_rank.php" id="list" class="list">排行榜</a>
+        </div>
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <h3 id="defen">你的分数: 0</h3>
+            <form action="subm.php" method="post">
+                <input type="hidden" id="fs" name="score" value="">
+                <input type="submit" class="btn btn-info" name="button">
+                <input type="button" class="btn btn-danger" value="返回" onclick="location.href='list.php'">
+            </form>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>无标题文档</title>
+</head>
+
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<body>
+
+	<div class="container">
+
+		<div class="row">
+
+			<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+				<a href="index.php?p=Admin&a=add&c=Products">添加商品</a>
+				<table class="table table-bordered table-hover">
+					<thead>
+						<tr>
+							<th>编号</th>
+							<th>名称</th>
+							<th>价格</th>
+							<th>删除</th>
+							<th>修改</th>
+						</tr>
+					</thead>
+					<tbody>
+						<?php foreach($list as $rows):?>
+						<tr>
+							<td>
+								<?=$rows['proID']?>
+							</td>
+							<td>
+								<?=$rows['proname']?>
+							</td>
+							<td>
+								<?=$rows['proprice']?>
+							</td>
+							<td><a href="index.php?p=Admin&c=Products&a=del&proid=<?=$rows['proID']?>"
+									onclick="return confirm('确定要删除吗')">删除</a></td>
+							<td><a href="index.php?p=Admin&c=Products&a=edit&proid=<?=$rows['proID']?>">修改</a></td>
+						</tr>
+						<?php endforeach;?>
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+
+	</div>
+
+</body>
+
+</html>

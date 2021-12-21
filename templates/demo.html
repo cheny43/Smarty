@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {config_load file='smarty.conf' section='winter'}
+    <style>
+        body{
+            {literal}
+            color: {$smarty.config.color};
+            font-size: {$smarty.config.size};
+            {/literal}
+        }
+    </style>
+</head>
+<body>
+    春天
+</body>
+</html>
